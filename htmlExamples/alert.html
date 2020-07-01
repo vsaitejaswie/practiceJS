@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Alert</title>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+
+        <h2>Alert Messages</h2>
+        <p>Click on the "x" symbol to close the alert message.</p>
+        <div class="alert">
+          <span class="closebtn">&times;</span>  
+          <strong>Danger!</strong> Indicates a dangerous or potentially negative action.
+        </div>
+        
+        <div class="alert success">
+          <span class="closebtn">&times;</span>  
+          <strong>Success!</strong> Indicates a successful or positive action.
+        </div>
+        
+        <div class="alert info">
+          <span class="closebtn">&times;</span>  
+          <strong>Info!</strong> Indicates a neutral informative change or action.
+        </div>
+        
+        <div class="alert alert-info alert-dismissible">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <strong>Info!</strong>
+        </div>
+        
+        <script>
+        var close = document.getElementsByClassName("close");
+        var i;
+        
+        for (i = 0; i < close.length; i++) {
+          close[i].onclick = function(){
+            var div = this.parentElement;
+            div.style.opacity = "0";
+            setTimeout(function(){ div.style.display = "none"; }, 600);
+          }
+        }
+        </script>
+        
+        </body>
+</html>
